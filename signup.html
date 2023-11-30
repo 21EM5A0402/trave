@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website - Sign Up</title>
+    <style>  body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://wallpaperaccess.com/full/1431622.jpg'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        background-color: rgba(255, 255, 255, 0.084); /* Adjust the alpha (4th value) for transparency */
+        backdrop-filter: blur(3px); /* Adjust the blur intensity */
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        padding: 20px;
+        text-align: center;
+        width: auto;
+    }
+    
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .signin-form {
+        /* max-width: 300px; */
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    h1 {
+        margin: 0;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        color: #007bff;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }</style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SSGN TRAVELING</h1>
+        </div>
+        <form class="signup-form">
+            <h2>Sign Up</h2>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="new-username">Username</label>
+            <input type="text" id="new-username" name="new-username" required>
+            
+            <label for="new-password">Password</label>
+            <input type="password" id="new-password" name="new-password" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+</body>
+</html>

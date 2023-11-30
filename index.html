@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSGN</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+    background-color: #e6e5e5;
+    color: #e9e9e9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    /* margin-top: 5px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   width: 100%;
+   position: fixed;
+   z-index: +1;
+}
+/* Style the logo */
+.logo img {
+    /* max-width: 200px; */
+    width: 200px;
+    
+}
+.search1{
+    width: 500px;
+    display: flex;
+    margin-left: 60px;
+  }
+  /* for styling input search */
+  .searchbar{
+ width: 400px;
+ border-color: ;
+ border: 3px solid  rgb(41, 149, 207);
+  }
+  .searchButton{
+      width: 40px;
+      height: 35px;
+      border: 3px solid  rgb(41, 149, 207);
+      background: #1172bd;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-size: 20px;
+  }
+  .user-icon{
+    cursor: pointer;
+    position: relative;
+  }
+  .menu-icon{
+    cursor: pointer;
+    position: relative;
+  }
+.menuimg{
+    width: 40px;
+}
+ /* Dropdown container */
+ .dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            /* min-width: 100px; Set the minimum width of the dropdown */
+        }
+
+        /* Show the dropdown when user-icon is hovered */
+        .user-icon:hover .dropdown {
+            display: block;
+        }
+        .menu-icon:hover .dropdown {
+            display: block;
+        }
+
+        /* Style for the dropdown list */
+        .dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown li {
+            padding: 10px;
+        }
+
+        .dropdown a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+ 
+.slides{
+    /* margin-top: 40px; */
+    /* padding-top: 0px; */
+    background-image:url(https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2022/09/how_to_start_a_travel_blog_-_article_image.jpg) ;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:static;
+    width: 100%;
+   padding: 250px;
+}
+.slides,h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+}
+.slides,p{
+    color:black ;
+}
+.slides-img{
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.card-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+   
+}
+.card{
+
+display: flex;
+width: 90%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 10px;
+justify-content: space-around;
+align-items: center;
+margin-top: 30px;
+padding: 10px;
+text-decoration: none;
+list-style: none;
+background: rgb(255,252,0);
+background: linear-gradient(337deg, rgba(255,252,0,1) 23%, rgb(255, 144, 65) 70%);
+
+}
+/* .card:hover{
+    color: #000;
+} */
+.card-head-img{
+    width: 40;
+    margin-bottom: 30px;
+
+}
+.card-content{
+    width: 60%;
+}
+.card-heading{
+ color: #000;
+ text-decoration: none;
+
+
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card-img{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 15px;
+    max-width: 300px;
+}
+.btn-cls{
+width: 100%;
+display: flex;
+max-height: 100px;
+/* align-items: center; */
+justify-content: center;
+margin-bottom: 2px;
+
+}
+
+.card-btn {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.card-btn:disabled {
+  cursor: default;
+}
+
+.card-btn:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800; /* Change to your preferred hover color */
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-social ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+  </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo2.png" alt="Logo">
+        </div>
+        <div class="search1">
+            <input type="search" class="searchbar" placeholder="Search Destinations,Places..">
+            <button type="submit" class="searchButton"> <i class='bx bx-search' style='color:#ffffff'  ></i>
+             </button>
+           
+        </div>
+      
+        <div class="user-icon">
+            
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAuZ
+                JREFUWEftlk1IFGEcxp//uJt90iWoKKxD7K4KhR+7o+XBICI6dJGWDhHhKbqlhuLO1qSjaUVEUOEhJDp4KOpQEJ00qNzZNkQpdlZ
+                BMqKC6NCHuek6b0yufdDuzvtu6yLRe53n/zy/eeadd4awyBYtMh78O0Du7oeraNrZCEI1gIpk0xEievRpWeLcq4btU9m0n1VDLi1U
+                IxH1gWFjmtBxmMxvnKh6KgolDOTufLKDTLMfgNMmbIpI8kUD3mciUEJAJWr/StOxfAzAOs6QmOGaKIXfP8upF9vU7o5QPTG6ymtu6UyS
+                9o4GvPd4Z4Qa8rTr10A4xGtu6RhDdywot/DOiAFp+n0Au3nNk7o7hiLv450RBArfBFgdr7mlI+BGVJH9vDOiQC0AO81rntQ1Gop8nndGC
+                KikK1JkJmbHARRwBswQFWyKBirfcOrF3jLL1K2FLhHoKE8AA87EFLmZRzuvEWrIGtpycazQ8fH9XYB22QTdNlwT+0XOoOSeE+FPalUmFTvCTQzQUpz
+                Yn8HQZATlniycxR/ZryFbzw6viH+dKiNI5QCbLjDNoS9mfPiFujOeDUz2DWWbxjEnvIc4PP9KIgzk6ox4JDNRSoyKGLA6VToBHxixl6bkeD7aWmmIE
+                HIBWT9jmHYGiHAYwFqRAADWGdS7pHBp58jxbZN2s7ZA7vbwHiJ2HcAaOzOb628h0QGj1fcgky4jkFvTjxBwee6TlJNlAjhoKHJfOre0Qa62sFeS2GMAjp
+                yg/DSJE0nedH+SKYEqeiLOyXezowA25xhm3m7ESPjKoJLV2G8rJVBxh97MGLoWCOa7LWOsPhas6uUC8mj6awDrFxIIwJChyOW2QCVtg7IpSaEFhplrKTGzI
+                abWWDf/Y/3xyJJv1pV8AIFRnRH03coI5NH0VgAd+QAisGNRpepCZqB2XQXhZD6AwHDKCMqqDdBgLSDV5gUI5oARrB7ICJQfkPQpufok5Ow+/gPZVfkN56jXJV
+                7nCdoAAAAASUVORK5CYII="/>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="signin.html">SignIn</a></li>
+                        <li><a href="#">SignUp</a></li>
+                    </ul>
+                </div>
+
+        </div>
+        <div class="menu-icon">
+            <img class="menuimg" src="icons8-menu-48.png" alt="Menu">
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="stateswise/andhra.html">Andhra Pradesh</a></li>
+                    <li><a href="stateswise/Tamilnadu.html">Tamil Nadu</a></li>
+                    <li><a href="stateswise/kerala.html">Kerala</a></li>
+                    <li><a href="stateswise/goa.html">Goa</a></li>
+                    <li><a href="stateswise/karnataka.html">Karnataka</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   <div class="slides">
+    <h1>SSGN TRAVELING</h1>
+    <p>Explore the States You want</p>
+   </div>
+
+<div style="margin-top: 40px; width: 100%; padding-left: 50px; ">
+<h2>Explore SouthIndian Places :</h2>
+</div>
+    <section class="card-section"> 
+       <a href="stateswise/andhra.html">
+        <div class="card">
+
+            <div class="card-head-img">
+                   <h3 class="card-heading">  1.Andhra Pradesh</h3>
+                   <img class="card-img" src="states/andhra.png" alt="Andhra">          
+            </div> </a> 
+      
+            <div class="card-content">
+                  <p>Andhra Pradesh, a state in the southeastern part of India, is known for its rich cultural heritage, historical sites, natural beauty, and diverse cuisine.</p>
+                  <p>Andhra Pradesh offers a diverse range of experiences for tourists, whether you're interested in spirituality, history, nature, or cuisine. Be sure to check the latest travel advisories and local guidelines when planning your visit.</p>
+                     <div class="btn-cls">
+                      <a href="stateswise/andhra.html"> <button class="card-btn" >Explore ➡️</button></a>
+                     </div>
+                
+            </div>
+
+        </div>
+
+  
+    </section>
+
+    
+    
+    <section class="card-section"> 
+        <a href="stateswise/Tamilnadu.html">
+          <div class="card">
+  
+              <div class="card-head-img">
+                     <h3 class="card-heading">2.Tamil Nadu</h3>
+                     <img class="card-img" src="states/tamilnadu.jpg" alt="Tamilnadu">          
+              </div> </a> 
+        
+              <div class="card-content">
+                    <p>Tamil Nadu, a state in southern India, is renowned for its rich cultural heritage, historical landmarks, diverse landscapes, and vibrant traditions. It is one of India's top tourist destinations, attracting travelers from around the world.</p>
+                    <p>Tamil Nadu's tourism industry continues to grow, offering a blend of cultural, historical, natural, and spiritual experiences for travelers. Visitors can explore the state's diverse attractions while enjoying its warm hospitality and traditional charm.</p>
+                       <div class="btn-cls">
+                        <a href="stateswise/Tamilnadu.html"> <button class="card-btn" >Explore ➡️</button></a>
+                       </div>
+                  
+              </div>
+  
+          </div>
+  
+    
+      </section>
+
+      <section class="card-section"> 
+        <a href="stateswise/kerala.html">
+          <div class="card">
+  
+              <div class="card-head-img">
+                     <h3 class="card-heading">3.Kerala</h3>
+                     <img class="card-img" src="states/kerla.jpg" alt="kerla">          
+              </div> </a> 
+        
+              <div class="card-content">
+                    <p>Kerala, a state located in the southwestern part of India, is a popular tourist destination known for its natural beauty, cultural diversity, and unique experiences.</p>
+                    <p>Kerala's diverse attractions and welcoming atmosphere make it a popular destination for domestic and international tourists, drawing people from all walks of life who seek to immerse themselves in its natural beauty, culture, and traditions.
+                    </p>
+                       <div class="btn-cls">
+                        <a href="stateswise/kerala.html"> <button class="card-btn" >Explore ➡️</button></a>
+                       </div>
+                  
+              </div>
+  
+          </div>
+  
+    
+      </section>
+
+      <section class="card-section"> 
+        
+          <a href="stateswise/goa.html">
+          <div class="card">
+  
+              <div class="card-head-img">
+                     <h3 class="card-heading">4.Goa</h3>
+                     <img class="card-img" src="states/goa.jpg" alt="goa">          
+              </div> </a> 
+        
+              <div class="card-content">
+                    <p>Goa is a well-known and popular tourist destination located on the western coast of India. It is known for its stunning beaches, vibrant nightlife, rich culture, and historic architecture. </p>
+                    <p>Goa's unique blend of natural beauty, cultural richness, and vibrant atmosphere make it a sought-after destination for tourists seeking relaxation, adventure, and cultural experiences. It is a place where one can unwind on the beach, explore historic sites, indulge in delicious cuisine, and immerse themselves in the local culture and festivities.</p>
+                       <div class="btn-cls">
+                        <a href="stateswise/goa.html"> <button class="card-btn" >Explore ➡️</button></a>
+                       </div>
+                  
+              </div>
+  
+          </div>
+  
+    
+      </section>
+    
+      <section class="card-section"> 
+        
+          <a href="stateswise/karnataka.html">
+          <div class="card">
+  
+              <div class="card-head-img">
+                     <h3 class="card-heading">5.Karnataka</h3>
+                     <img class="card-img" src="states/karnataka.jpg" alt="karnataka">          
+              </div> </a> 
+        
+              <div class="card-content">
+                    <p>Karnataka is a diverse and culturally rich state located in the southern part of India. It is known for its historical significance, natural beauty, vibrant culture, and modern developments.  </p>
+                    <p>Karnataka's combination of historical heritage, natural beauty, cultural diversity, and modern advancements makes it an appealing destination for tourists, researchers, and those seeking a blend of tradition and innovation.</p>
+                       <div class="btn-cls">
+                        <a href="stateswise/karnataka.html"> <button class="card-btn" >Explore ➡️</button></a>
+                       </div>
+                  
+              </div>
+  
+          </div>
+  
+    
+      </section>
+      <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo2.png" alt="Travel Logo">
+                    
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#"><img src="icons8-facebook-48.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="icons8-twitter-48.png" alt="Twitter"></a></li>
+                        <li><a href="#"><img src="icons8-instagram-48.png" alt="Instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SSGN TRAVELLING. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
